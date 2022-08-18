@@ -50,6 +50,8 @@
 
         devShells.default = pkgs.devshell.mkShell {
           packages = with pkgs; [
+            # erg
+            self.packages.${system}.erg
             gcc
             rustc
             cargo
