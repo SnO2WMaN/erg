@@ -175,20 +175,23 @@ cargo build --release
 
 ### Building by Nix
 
-If you've been installed [Nix](https://nixos.org/), the following command will be generate binary into `result/bin/erg` under the project.
+If you've been installed [Nix](https://nixos.org/), the following command will be generate executable into `result/bin/erg` under the project.
 
 ```sh
-git clone https://github.com/erg-lang/erg.git
-cd erg
 nix-build
+```
+
+Or, if you don't need executable and just want to try.
+```sh 
+nix-shell
+erg ./examples/helloworld.er
 ```
 
 If you've been enabled [Nix Flakes](https://nixos.wiki/wiki/Flakes).
 
 ```sh
-git clone https://github.com/erg-lang/erg.git
-cd erg
 nix build
+nix run ".#erg" -- ./examples/helloworld.er # If you don't need executable and just want to try.
 ```
 
 ## Contribution
