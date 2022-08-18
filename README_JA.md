@@ -184,13 +184,19 @@ git clone https://github.com/erg-lang/erg.git
 cd erg
 nix-build
 ```
+ 
+あるいは，実行ファイルは必要なく，ただ試したいだけなら次でも実行できます
+．
+```sh 
+nix-shell
+erg ./examples/helloworld.er
+```
 
 [Nix Flakes](https://nixos.wiki/wiki/Flakes)を有効化している場合は次のコマンドでも良いです.
 
 ```sh
-git clone https://github.com/erg-lang/erg.git
-cd erg
 nix build
+nix run ".#erg" -- ./examples/helloworld.er # 実行ファイル無しでただ試したいだけなら
 ```
 
 ## コントリビューション
