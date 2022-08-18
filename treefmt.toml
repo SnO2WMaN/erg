@@ -7,6 +7,6 @@ includes = ["*.nix"]
 # options = ["format"]
 # includes = ["*.toml"]
 
-# [formatter.rustfmt]
-# command = "rustfmt"
-# includes = ["*.rs"]
+[formatter.rustfmt]
+command = "rustfmt"
+includes = ["*.rs"]
