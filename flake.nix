@@ -45,6 +45,9 @@
         };
         packages.default = self.packages.${system}.erg;
 
+        apps.erg = flake-utils.lib.mkApp {drv = self.packages.${system}.erg;};
+        apps.default = self.apps.${system}.erg;
+
         devShells.default = pkgs.devshell.mkShell {
           packages = with pkgs; [
             gcc
